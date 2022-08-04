@@ -1,0 +1,17 @@
+School:
+  - name: MMS
+    principal: shanthi
+    Students:
+      - Student:
+          - name: abdul
+            age: 20
+          - name: abd
+            age: 20
+  - name: SMS
+    principal: Boonthi
+    Students:
+      - Student:
+          - name: abdulla
+            age: 20
+          - name: abdu
+            age: 20

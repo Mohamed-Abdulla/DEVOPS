@@ -1,0 +1,28 @@
+#key value pair
+
+apple: "iam a red fruit"
+1: "this is abd roll number"
+---
+#lists
+- apple
+- mango
+- orange
+- Apple
+---
+#!yaml is case sensitive.intendations are very important
+#!you can check errors using yaml parsers - website :yamlint.com
+#!yaml basically is the collection of zer0 or more documents, to seperate diff documents use ---
+#! ... used to represent the document is ended.
+
+#block -like array
+cities:
+  - chennai
+  - mumbai
+  - tajikistan
+
+---
+#same as above, this may avoid intendation errors.
+cities: [newdelhi, mumbai]
+---
+# this is like obj
+{ mango: "yellow", age: 56 }

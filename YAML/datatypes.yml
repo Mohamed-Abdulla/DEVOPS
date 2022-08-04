@@ -1,0 +1,64 @@
+#~ String variables -3 ways to represent string variables
+
+myself: Mohamed Abdulla
+fruit: "apple"
+job: "swe"
+#write in multiple lines
+bio : |
+ hey iam a Mohamed.
+ iam cool
+
+
+#write a single line in multiple lines 
+
+message : >
+ this will 
+ all be 
+ in one single line
+
+
+#same as above
+message : this will all be in one single line
+
+#~integers
+number: 321
+
+#~float
+marks: 21.12
+
+#~boolean
+booleanValue: No #n,N,false,False,FALSE
+#same for true -> yes,y,Y
+
+#it will automatically detect the type,but we can also tell explicitly
+#~ specify the type 
+
+zero: !!int 0
+positiveNumber: !!int 43
+negativeNumber: !!int -1
+binaryNumber: !!int 0b10101
+octalNumber: !!int 034343
+hexNumber: !!int 0x12345678
+commaValue:  !!int +540_000 #500,400
+exponentialNumber: 6.032E56
+
+#~floating point numbers
+
+marks: !!float 323.321
+infinite: !!float .inf
+nan: !!float .nan
+
+# ~boolean value
+booleanValue: !!bool No 
+
+# ~string 
+message : !!str this will all be in one single line
+
+# ~null
+surname : !!null Null #or null NULL ~
+~: this is a null key
+
+# ~dates and time
+dates: 2002-01-01
+india time : 2002-01-01T02:59:43:10 +5:30
+no time zone : 2002-01-01T02:59:43:10 

@@ -1,0 +1,13 @@
+xml - Extensible Markup Language
+it is not readable by humans.
+
+<?xml version="1.0" encoding="UTF-8"?>
+<School name="MMS" principal="shanthi">
+    <Students>
+        <Student>
+            <rno>1</rno>
+            <name>"mohamed"</name>
+            <marks>99</marks>
+        </Student>
+    </Students>
+</School>

@@ -1,0 +1,94 @@
+#~sequence datatype
+
+student: !!seq
+  - marks
+  - name
+  - phone
+
+
+# or
+student: [marks, name, phone]
+
+#some of the keys of the sequence will be empty
+#sparse seq
+
+sparseSeq:
+ - hey
+ - you
+ - 
+ - Null
+ - sup
+
+
+# sublists - nested sequence
+nested: 
+ -
+  - mango
+  - apple
+  - orange
+ - 
+  - brinjal
+  - carrot
+  - tomato
+
+
+#key:valye pairs are called maps
+!!map
+
+#nested mappings :map within an map -nested objects
+name: mohaemed abdulla
+role:
+ age: 20
+ job: student
+
+
+#pairs: keys may have duplicate valyes
+# !!pairs
+
+pair example: !!pairs
+ - job: student
+ - job: teacher
+
+#this is will be an array of hashtables
+#same as
+pair example: !!pairs [job: student, job: teacher]
+
+# !!set will allow you to have unique values
+
+names: !!set 
+ ? abd
+ ? abdy
+
+
+#some times you want entire seq as value ,at case use dictionary !!omap
+
+people: !!omap
+ - abd:
+    name: Mohamed abdulla
+    age: 20
+ - abdu:
+    name: abdulla
+    age: 20
+
+#reusing some properties using anchors
+
+likings: &likes # & (any name we want to call)
+  fav fruit: mango
+  dislikes: pear
+
+person1:
+  name: Mohamed Abdulla
+  <<: *likes
+person2:
+  name: Mohamed 
+  <<: *likes
+  dislikes: berries #it overwrites
+#this will look like 
+person2:
+  name: Mohamed 
+  fav fruit: mango
+  dislikes: berries
+
+person3:
+  name:  Abdulla
+   <<: *likes
